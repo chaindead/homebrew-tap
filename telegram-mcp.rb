@@ -5,21 +5,21 @@
 class TelegramMcp < Formula
   desc "Telegram MCP server for AI assistants"
   homepage "https://github.com/chaindead/telegram-mcp"
-  version "0.1.19"
+  version "0.1.20"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/chaindead/telegram-mcp/releases/download/v0.1.19/telegram-mcp_Darwin_x86_64.tar.gz"
-      sha256 "913cc551897432e95a83ef71355d5692ed87572053653ab422dd88cb823e5e24"
+      url "https://github.com/chaindead/telegram-mcp/releases/download/v0.1.20/telegram-mcp_Darwin_x86_64.tar.gz"
+      sha256 "5fe941f9747277a4fade13b1230737be9c706ee63c1be99cb23b1a5c47e5f1c7"
 
       def install
         bin.install "telegram-mcp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/chaindead/telegram-mcp/releases/download/v0.1.19/telegram-mcp_Darwin_arm64.tar.gz"
-      sha256 "32d2a03461b773973d73742c53549c70f585535dd8aff0926c2d91ad60b29235"
+      url "https://github.com/chaindead/telegram-mcp/releases/download/v0.1.20/telegram-mcp_Darwin_arm64.tar.gz"
+      sha256 "4bc220abb16bc250d2c057d3213ae297dfd9ca65c6b925cace93f85cbb7826e6"
 
       def install
         bin.install "telegram-mcp"
@@ -30,8 +30,8 @@ class TelegramMcp < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/chaindead/telegram-mcp/releases/download/v0.1.19/telegram-mcp_Linux_x86_64.tar.gz"
-        sha256 "0cd22aa873b084ed3d72dd7a2223bcf751cc61e725aa87219e515e5db928d873"
+        url "https://github.com/chaindead/telegram-mcp/releases/download/v0.1.20/telegram-mcp_Linux_x86_64.tar.gz"
+        sha256 "726e5b66ab47ab5ff40f625172e4a9027af8311f015bf68a5bc7b15cb3283486"
 
         def install
           bin.install "telegram-mcp"
@@ -40,8 +40,8 @@ class TelegramMcp < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/chaindead/telegram-mcp/releases/download/v0.1.19/telegram-mcp_Linux_arm64.tar.gz"
-        sha256 "c00f18aec7e71477529684ac38ce203609ea7d594d0c9320448cc8880a900719"
+        url "https://github.com/chaindead/telegram-mcp/releases/download/v0.1.20/telegram-mcp_Linux_arm64.tar.gz"
+        sha256 "230e7a4023d01d3e16a669b70596ac7f3f40b955d3740ab861cd58f96c6ee500"
 
         def install
           bin.install "telegram-mcp"
