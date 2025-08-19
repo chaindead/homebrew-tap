@@ -5,21 +5,21 @@
 class Modup < Formula
   desc "Interactive TUI to scan and upgrade Go modules"
   homepage "https://github.com/chaindead/modup"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/chaindead/modup/releases/download/v0.2.0/modup_Darwin_x86_64.tar.gz"
-      sha256 "f0f980a597d1feb6e309fc9f2ef0ad96fc16929a624dc70ff5edb3d06330bdd3"
+      url "https://github.com/chaindead/modup/releases/download/v0.2.1/modup_Darwin_x86_64.tar.gz"
+      sha256 "7a4a8735cea7a3896b907c17f7de1e778aa67f8acdc46213d0c120dc2dbac97a"
 
       def install
         bin.install "modup"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/chaindead/modup/releases/download/v0.2.0/modup_Darwin_arm64.tar.gz"
-      sha256 "d2266429d13135e3af6a2c65e6f8f117919de911c0ba44630d1db45dea37cf0d"
+      url "https://github.com/chaindead/modup/releases/download/v0.2.1/modup_Darwin_arm64.tar.gz"
+      sha256 "cdf8304c38f58d8715e10319ead8996a8f8b1de99e50d5697606109ac13a0e11"
 
       def install
         bin.install "modup"
@@ -29,15 +29,15 @@ class Modup < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/chaindead/modup/releases/download/v0.2.0/modup_Linux_x86_64.tar.gz"
-      sha256 "7b1b4c06703f872bb4ea86366b67541449dbc2a006c54c52385604e3c6b67a1a"
+      url "https://github.com/chaindead/modup/releases/download/v0.2.1/modup_Linux_x86_64.tar.gz"
+      sha256 "c98d5ba59a8515766907457ec92a7fdea41a586f0c2fb1b62eb6a46e1d5a138f"
       def install
         bin.install "modup"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/chaindead/modup/releases/download/v0.2.0/modup_Linux_arm64.tar.gz"
-      sha256 "655744d4aeede599571589ef15ded623721ca30c0075f18cc924934e16bba1d6"
+      url "https://github.com/chaindead/modup/releases/download/v0.2.1/modup_Linux_arm64.tar.gz"
+      sha256 "c6a05140e646065cb0cb5d72b81f85c3d262b570f388286130215543d58bba69"
       def install
         bin.install "modup"
       end
