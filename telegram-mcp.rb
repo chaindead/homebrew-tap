@@ -5,21 +5,21 @@
 class TelegramMcp < Formula
   desc "Telegram MCP server for AI assistants"
   homepage "https://github.com/chaindead/telegram-mcp"
-  version "0.0.2"
+  version "0.0.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/chaindead/tooner/releases/download/v0.0.2/tooner_Darwin_x86_64.tar.gz"
-      sha256 "00ad03014e796f202334a2e63cac3976db378b8fea16f2cf03a3e6f109e7bc0c"
+      url "https://github.com/chaindead/tooner/releases/download/v0.0.4/tooner_Darwin_x86_64.tar.gz"
+      sha256 "3cb268107a7f4ed865d773f539d9795fbd76afc2dee5f9011c31208a9d40c2f3"
 
       define_method(:install) do
         bin.install "telegram-mcp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/chaindead/tooner/releases/download/v0.0.2/tooner_Darwin_arm64.tar.gz"
-      sha256 "d4c076a2c6b5982ceb80593b0f5356c83ba4f77de4435dc831c76311d60dc12c"
+      url "https://github.com/chaindead/tooner/releases/download/v0.0.4/tooner_Darwin_arm64.tar.gz"
+      sha256 "01946ce902a64212f4132c88adb56098af97751214f0f82a1e8d7256a9e06568"
 
       define_method(:install) do
         bin.install "telegram-mcp"
@@ -29,15 +29,15 @@ class TelegramMcp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chaindead/tooner/releases/download/v0.0.2/tooner_Linux_x86_64.tar.gz"
-      sha256 "c8dd50080b58c590a3aa83210b9282a84a28fb26200d89516d1e47cf2f286d15"
+      url "https://github.com/chaindead/tooner/releases/download/v0.0.4/tooner_Linux_x86_64.tar.gz"
+      sha256 "400d35255b321534551fa8c3f78bfb386a4369cba1e2e8d6b6fc327eac092c82"
       define_method(:install) do
         bin.install "telegram-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chaindead/tooner/releases/download/v0.0.2/tooner_Linux_arm64.tar.gz"
-      sha256 "e776bf6ae032e5ca78e13cf459f75bd058bc4db366fe036a7f1cf2d07656f14d"
+      url "https://github.com/chaindead/tooner/releases/download/v0.0.4/tooner_Linux_arm64.tar.gz"
+      sha256 "9b5bbfb79a0d2d984f799af50cbc73ce2be051a1fb975186b9bd2dde7318fb87"
       define_method(:install) do
         bin.install "telegram-mcp"
       end
