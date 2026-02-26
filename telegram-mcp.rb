@@ -5,40 +5,40 @@
 class TelegramMcp < Formula
   desc "Telegram MCP server for AI assistants"
   homepage "https://github.com/chaindead/telegram-mcp"
-  version "0.0.2"
+  version "0.1.23"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/chaindead/tooner/releases/download/v0.0.2/tooner_Darwin_x86_64.tar.gz"
-      sha256 "00ad03014e796f202334a2e63cac3976db378b8fea16f2cf03a3e6f109e7bc0c"
+      url "https://github.com/chaindead/telegram-mcp/releases/download/v0.1.23/telegram-mcp_Darwin_x86_64.tar.gz"
+      sha256 "9153063c73bb32ce32ba9d40bea7ceef225946beeba84cea4f1dc9decd414a74"
 
-      define_method(:install) do
+      def install
         bin.install "telegram-mcp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/chaindead/tooner/releases/download/v0.0.2/tooner_Darwin_arm64.tar.gz"
-      sha256 "d4c076a2c6b5982ceb80593b0f5356c83ba4f77de4435dc831c76311d60dc12c"
+      url "https://github.com/chaindead/telegram-mcp/releases/download/v0.1.23/telegram-mcp_Darwin_arm64.tar.gz"
+      sha256 "63d1eabeeb05d2b86bdc74ac3403442b91df51f2a81644401ee86c5eb9a47f45"
 
-      define_method(:install) do
+      def install
         bin.install "telegram-mcp"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chaindead/tooner/releases/download/v0.0.2/tooner_Linux_x86_64.tar.gz"
-      sha256 "c8dd50080b58c590a3aa83210b9282a84a28fb26200d89516d1e47cf2f286d15"
-      define_method(:install) do
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/chaindead/telegram-mcp/releases/download/v0.1.23/telegram-mcp_Linux_x86_64.tar.gz"
+      sha256 "6b53db3fc7e37f805875c3622ca7bd9d6ea9f3a20340044a0e52e4e815c46338"
+      def install
         bin.install "telegram-mcp"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chaindead/tooner/releases/download/v0.0.2/tooner_Linux_arm64.tar.gz"
-      sha256 "e776bf6ae032e5ca78e13cf459f75bd058bc4db366fe036a7f1cf2d07656f14d"
-      define_method(:install) do
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/chaindead/telegram-mcp/releases/download/v0.1.23/telegram-mcp_Linux_arm64.tar.gz"
+      sha256 "33b6eef6542936c14b260604aa742ed1dcbe7190ad4c7bdd1ffc7a6fb9b70704"
+      def install
         bin.install "telegram-mcp"
       end
     end
