@@ -5,21 +5,21 @@
 class Tooner < Formula
   desc "MCP proxy that reduces token usage via TOON format"
   homepage "https://github.com/chaindead/tooner"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/chaindead/tooner/releases/download/v0.2.0/tooner_Darwin_x86_64.tar.gz"
-      sha256 "8bc918edfe3abe45676064d62c9300c3fa6ef2ca3cc5c8e003d33180ce24fc84"
+      url "https://github.com/chaindead/tooner/releases/download/v0.2.1/tooner_Darwin_x86_64.tar.gz"
+      sha256 "eff979514a80bd9750c802cc9d94c938cec1615c7260832d51a23b4459aad6b5"
 
       define_method(:install) do
         bin.install "tooner"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/chaindead/tooner/releases/download/v0.2.0/tooner_Darwin_arm64.tar.gz"
-      sha256 "4ef5dec018f477432882fb029e6c4df9d51b6681573492934cc8aa4acfa0fa72"
+      url "https://github.com/chaindead/tooner/releases/download/v0.2.1/tooner_Darwin_arm64.tar.gz"
+      sha256 "eaece7f47ffe2697c0da5f25b5ba17c8a83023389a3d17d4048c8298a7b5658d"
 
       define_method(:install) do
         bin.install "tooner"
@@ -29,15 +29,15 @@ class Tooner < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chaindead/tooner/releases/download/v0.2.0/tooner_Linux_x86_64.tar.gz"
-      sha256 "a9a877f7e3579936b5e0249430e7ccb9e2f41f9e2c5fcc50c96bb9bfd05d2b47"
+      url "https://github.com/chaindead/tooner/releases/download/v0.2.1/tooner_Linux_x86_64.tar.gz"
+      sha256 "52014964528cdbadda92241d464014ecb4e12e5bec498b940cf193f91021865d"
       define_method(:install) do
         bin.install "tooner"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chaindead/tooner/releases/download/v0.2.0/tooner_Linux_arm64.tar.gz"
-      sha256 "9ebcd505a1d23a4d8552ed80032835d280f7ace07a92eb1d912b5595f6079e6f"
+      url "https://github.com/chaindead/tooner/releases/download/v0.2.1/tooner_Linux_arm64.tar.gz"
+      sha256 "34bb45ac3486b69309f04ce0fe1c8bac2586351ffccd8770230af3fdb440f7ea"
       define_method(:install) do
         bin.install "tooner"
       end
